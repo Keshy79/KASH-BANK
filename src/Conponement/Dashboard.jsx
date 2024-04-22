@@ -15,7 +15,9 @@ import {BiMoneyWithdraw} from "react-icons/bi"
 import { MdNotifications } from "react-icons/md";
 import Footer from './Footer';
 import { FaUser } from "react-icons/fa";
-
+import { FaHistory } from "react-icons/fa";
+import { NavLink } from 'react-router-dom';
+import { TbMoneybag } from "react-icons/tb";
 
 
 
@@ -68,9 +70,10 @@ const Dashboard = () => {
       </div>
     
 
-       <div className='d-flex justify-content-between pt-4 '>
+       <div className='d-flex pt-4 align-items-center  '>
       <p>Good morning, remember to save today</p>
-      <img src={bag} alt="" />
+      {/* <img src={bag} alt="" /> */}
+      <TbMoneybag className='' />
       </div>
       
 
@@ -161,6 +164,7 @@ const Dashboard = () => {
          <div className=' total'>
          <p className=''>Avaliable Balance</p>
          <h2>$50,000</h2>
+         <h5>Saving Account</h5>
          </div>
        </div>
 
@@ -169,7 +173,7 @@ const Dashboard = () => {
           <div>
            <GiTakeMyMoney className='react-icons' />
          </div>
-           <p className='ms-3 mt-2 fw-bolder'>Add money</p>
+           <p className='ms-3 mt-2 fw-bolder'>Deposit</p>
          </div>
 
          <div>
@@ -191,6 +195,15 @@ const Dashboard = () => {
          <BiMoneyWithdraw className='react-icons' />
          </div>
          <p className='ms-3 mt-2 fw-bolder '>Withdraw</p>
+       </div>
+
+       <div>
+        <NavLink to ={"/History"} style={{color: "black", textDecoration: "none"}}>
+         <div>
+         <FaHistory className='react-icons'/>
+         </div>
+         <p className='ms-3 mt-2 fw-bolder '>History</p>
+       </NavLink>
        </div>
 
       </div>

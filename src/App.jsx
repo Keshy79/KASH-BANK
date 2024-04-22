@@ -15,6 +15,7 @@ import Saveme from "./Pages/Saveme";
 import Account from "./Pages/Account";
 import Reward from "./Pages/Reward";
 import Loan from "./Pages/Loan";
+import History from "./Pages/History";
 import { Toaster } from "react-hot-toast";
 
 
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/Reward" element={<Reward />} />
         <Route path="/Saveme" element={<Saveme />} />
         <Route path="/Loan" element={<Loan />} />
+        <Route path="/History" element={<History />} />
         <Route path="/Footer" element={<Footer />} />
         <Route path="/Welcome" element={<Welcome />} />
         <Route path="/Withdraw" element={<Withdraw />} />

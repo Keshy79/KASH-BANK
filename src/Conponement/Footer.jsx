@@ -19,35 +19,35 @@ const footer = () => {
         <div className=" mx-3 px-3 text-center shadow-sm footer fixed-bottom ">
         <div className="no-padding mt-2">
          <div className=" ">
-         <NavLink to="/Dashboard">
+         <NavLink to="/Dashboard" style={{color: "black", textDecoration: "none"}}>
            <SiHomebridge />
            <p>Home</p>
          </NavLink>
             </div>
 
          <div className="">
-            <NavLink to="/Saveme">
+            <NavLink to="/Saveme" style={{color: "black", textDecoration: "none"}}>
             <BsSave2 />
             <p>Save</p>
             </NavLink>
           </div>
 
          <div className="">
-         <NavLink to="/Loan">
+         <NavLink to="/Loan" style={{color: "black", textDecoration: "none"}}>
           <LuCircleDollarSign />
           <p>Loan</p>
           </NavLink>
           </div>
 
          <div className="">
-            <NavLink to="/Reward">
+            <NavLink to="/Reward" style={{color: "black", textDecoration: "none"}}>
          <IoDiamond />
           <p>Rewards</p>
           </NavLink>
           </div>
 
         <div className="">
-            <NavLink to="/Account">
+            <NavLink to="/Account" style={{color: "black", textDecoration: "none"}}>
          <FaUser />
           <p>Account</p>
           </NavLink>
