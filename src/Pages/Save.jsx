@@ -8,7 +8,7 @@ const Save = () => {
     const navigate = useNavigate();
   return (
     <div className='text-center p-2'>
-        <h4 onClick={()=>{navigate('/Withdraw')}} className=' float-end '>Skip</h4>
+        <h4 onClick={()=>{navigate('/Login')}} className=' float-end' style= {{cursor: "pointer"}}>Skip</h4>
         <img className='img-fluid'style={{height: "75vh"}} src={Saveme} alt="" />
         <h1>Save money</h1>
 
@@ -16,9 +16,9 @@ const Save = () => {
         
        <div className='d-flex justify-content-between  '>
        <div className='d-flex '>
-            <div style={{background:'#2BDC2B', height:'20px', width: '20px', borderRadius: "100%"}}></div>
-            <div style={{background:'#e0e0e0', height:'20px', width: '20px', borderRadius: "100%", margin:'0 15px'}}></div>
-            <div style={{background:'#e0e0e0', height:'20px', width: '20px', borderRadius: "100%"}}></div>
+            <div style={{background:'#2BDC2B', height:'20px', width: '20px', borderRadius: "100%", cursor: "pointer"}}></div>
+            <div onClick={()=>{navigate('/Withdraw')}} style={{background:'#e0e0e0', height:'20px', width: '20px', borderRadius: "100%", margin:'0 15px', cursor: "pointer"}}></div>
+            <div onClick={()=>{navigate('/invest')}} style={{background:'#e0e0e0', height:'20px', width: '20px', borderRadius: "100%", cursor: "pointer"}}></div>
         </div>
 
         <button onClick={()=>{navigate('/Withdraw')}} style={{border: "none", padding: "10px", backgroundColor: "#2bdc2b"}}>NEXT</button>

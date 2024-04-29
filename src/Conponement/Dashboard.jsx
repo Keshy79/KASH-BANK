@@ -70,10 +70,10 @@ const Dashboard = () => {
       </div>
     
 
-       <div className='d-flex pt-4 align-items-center  '>
+       <div className='d-flex pt-4  '>
       <p>Good morning, remember to save today</p>
       {/* <img src={bag} alt="" /> */}
-      <TbMoneybag className='' />
+      <TbMoneybag className='align-item-center my-2 ' />
       </div>
       
 

@@ -7,7 +7,7 @@ const Kash = () => {
     const navigate = useNavigate();
   return (
    <div>
-     <div onClick={()=>{navigate('/Save')}} style={{ marginTop:"50vh"}} className='kashDiv d-flex align-items-center justify-content-center' >
+     <div onClick={()=>{navigate('/Landing')}} style={{ marginTop:"50vh", cursor: "pointer"}} className='kashDiv d-flex align-items-center justify-content-center' >
         <img src={Group} alt="" />
         <h1 className='ms-2'>KASH BANK</h1>
     </div>
