@@ -20,13 +20,15 @@ import { NavLink } from 'react-router-dom';
 import { TbMoneybag } from "react-icons/tb";
 
 
-
-
 const Dashboard = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState(null);
   let url = "http://localhost:5000/client/dashboard";
   let token = localStorage.getItem("token");
+
+  const fundAcct = () => {
+    navigate("/dashboard/fund-acct");
+  }
 
   useEffect(() => {
     axios.get(url, {
@@ -41,12 +43,14 @@ const Dashboard = () => {
       if (res.data.status === true) {
        console.log("success");
        setUserData(res.data.user);
-      } else {
-        localStorage.removeItem("token");
-        navigate("/login");
-        console.log(res.status);
       }
-    });
+    })
+    .catch((err) => {
+      console.log(err);
+      localStorage.removeItem("token");
+      navigate("/login");
+      console.log(res.status);
+    });;
   }, []);
   return (
     <>
@@ -57,7 +61,7 @@ const Dashboard = () => {
       <FaUser className='mt-1' />
       {userData ? (
         <div>
-          <p>Hello, {userData.firstName}</p>
+          <p>Welcome, {userData.firstName}</p>
         </div>
       ) : (
         <div>Loading...</div>
@@ -184,7 +188,7 @@ const Dashboard = () => {
        </div>
 
         <div>
-         <div>
+         <div onClick={fundAcct} style={{cursor: "pointer"}}>
          <BsBank2 className='react-icons' />
          </div>
          <p className='ms-3 mt-2 fw-bolder'>To Bank</p>

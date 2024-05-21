@@ -18,6 +18,7 @@ import Loan from "./Pages/Loan";
 import History from "./Pages/History";
 import Landing from "./Conponement/Landing";
 import { Toaster } from "react-hot-toast";
+import Fundacct from "./Pages/Fundacct";
 
 
 const App = () => {
@@ -42,7 +43,8 @@ const App = () => {
         <Route path="/Welcome" element={<Welcome />} />
         <Route path="/Withdraw" element={<Withdraw />} />
         <Route path="/Forgotten" element={<Forgotten />} />
-        <Route path="/Dashboard" element={token ? <Dashboard/> : <Navigate to="/Signin" />} />
+        <Route path="/dashboard/fund-acct" element={token ? <Fundacct/> : <Navigate to="/login" />} />
+        <Route path="/Dashboard" element={token ? <Dashboard/> : <Navigate to="/login" />} />
         {/* <Route path="/" element={<Fetch />} /> */}
       </Routes>
     </div>

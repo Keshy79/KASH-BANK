@@ -25,9 +25,9 @@ const Login = () => {
         .then((res) => {
           console.log(res);
           toast.success("Login Successfully");
+          navigate("/dashboard");
           let token = res.data.token;
           localStorage.setItem("token", token);
-          navigate("/dashboard");
         })
         .catch((err) => {
           console.log(err);

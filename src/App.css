@@ -90,10 +90,111 @@ input {
   margin-bottom: 10em;
 }
 
+.cardsContainer {
+  background: linear-gradient(to left, white 30%, #c9dcd6);
+  padding: 50px;
+}
+
+.cardsContainer h1 {
+  margin: 20px 0 40px 0;
+  font-weight: 700;
+}
+
+.cards {
+  display: flex;
+gap: 30px;
+}
+
+.star img{
+height: 10px;
+}
+
 #navbtn {
   display: flex;
-  margin-left: 60px;
+  margin-left: 160px;
 }
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.image-placeholder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  color: #888;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.iconNw {
+  display: flex;
+  justify-content: center;
+  bottom: 50vh;
+  right: 100vh;
+  position: absolute;
+  font-size: 24px;
+  color: #00ff26a2;
+
+}
+
+.upload{
+  background-color: #1d911d;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.upload:hover{
+  background-color: #206720;
+}
+
+.add {
+  width: 10px;
+}
+
+.total {
+  width: 99.99%;
+  margin: auto;
+}
+
+.yellow {
+  position: relative;
+  right: 100px;
+}
+
+.purple {
+  position: relative;
+  bottom: 30px;
+}
+
+.blue {
+}
+
+.button {
+  margin-top: 10px;
+}
+
 
 @media(max-width: 1200px){
   .total{
@@ -103,6 +204,16 @@ input {
 @media (max-width: 750px) {
     .form {
         width: 100%;
+    }
+
+    .iconNw {
+      display: flex;
+      justify-content: center;
+      bottom: 54vh;
+      right: 20vh;
+      position: absolute;
+      font-size: 24px;
+      color: #00ff26a2;
     }
 
     #navbtn {
@@ -148,24 +259,23 @@ input {
      }
 
      .yellow {
-      transform: translate(200px);
-      width: 40%;
+      position: relative;
+      right: 100px;
     }
     
     .purple {
-      transform: translate(-80px, 75px);
-      width: 40%;
+      position: relative;
+      bottom: 30px;
     }
     
     .blue {
-      transform: translate(50px, -50px);
-      width: 40%;
+     position: relative;
+     top: 20px;
+     right: 20px;
     }
 
     .top {
-      background-size: cover !important;
       width: 100%;
-      height: 100vh;
       position: relative;
     }
     
@@ -173,18 +283,61 @@ input {
     position: absolute;
     top: 7%;
     } 
+
+    .topBox {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      /* gap: 10px; */
+    }
+    #footer {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px;
+    }
+
+    #copy{
+      padding: 20px;
+    }
+
+    .downloadBtn {
+      display: block;
+    }
+
+    .cards {
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+
+    .cardsContainer {
+      padding: 10px;
+    }
+
+    .cardsContainer h1 {
+      margin: 0 0 20px 0;
+    }
+
+    #cardMan {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+
 }
 
 .top {
-  background-size: cover !important;
-  width: 100%;
-  height: 90vh;
-  position: relative;
+  height: 70vh;
 }
 
-#save {
-position: absolute;
-top: 18%;
+
+.topBox {
+  display: flex;
+  align-items: center;
+  padding: 70px 0;
+  gap: 100px;
+}
+
+.topBox h1{
+  font-size: 50px;
 }
 
 .yellow {
@@ -207,6 +360,114 @@ top: 18%;
   top: 30%;
   display: flex;
 }
+
+.cardMan {
+  background: linear-gradient(to right, #c9dcd6 55%, white);
+  padding: 10px 100px 30px 100px;
+  display: flex;
+}
+
+.star {
+  display: flex;
+  padding: 50px 70px;
+}
+
+#card {
+  display: flex;
+  gap: 15px;
+  border: 1px solid grey;
+  padding: 20px;
+}
+
+.leftCard p {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.leftCard h6 {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.lorem {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+.saying {
+  background: linear-gradient(to right,  white, #c9dcd6 50%);
+  padding: 10px 100px 30px 100px;
+}
+.kashfah {
+  border-radius: 10px;
+  border: 1px solid black;
+  /* display: flex; */
+  padding: 10px;
+  width: 35%;
+}
+.kesh{
+  width: 30%;
+  border-radius: 10px;
+}
+.loanBtn {
+  border: "1px solid #4db166";
+    /* background: transparent; */
+    color: white;
+    border: 1px solid white;
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    background-color: #2bdc2b;
+}
+
+.loanBtn:hover {
+  color: #4db166;
+  background: whitesmoke;
+  border: 1px solid #4db166;
+}
+
+.downloadBtn {
+  border: "1px solid #2bdc2b";
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 7px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+
+}
+
+.downloadBtn:hover {
+  color: #4db166;
+  background: whitesmoke;
+  border: 1px solid #4db166;
+}
+
+.blkBtn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #4db166;
+}
+
+.foot a {
+  /* background: linear-gradient(to right,  #c9dcd6 55%, white); */
+  text-decoration: none;
+  color: black;
+}
+
+.foot{
+
+  padding: 30px 100px;
+display: grid;
+grid-template-columns: repeat(4,1fr);
+gap: 50px;
+}
+
+.copy {
+  padding: 20px 100px;
+}
+
 
 .flip-card {
     background-color: transparent;
@@ -335,7 +596,7 @@ top: 18%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 120%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -363,3 +624,14 @@ top: 18%;
     border: none;
     border-radius: 50%;
   }
+
+  .blkBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+  }
+
+  
